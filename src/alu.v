@@ -19,7 +19,21 @@
 
 `default_nettype none
 
-module hulohot_alu(
+module hulohot_alu_wrapper(
+    input [7:0] io_in,
+    output [7:0] io_out
+);
+
+alu_inst alu_inst(
+    .a(io_in[2:0]),
+    .b(io_in[6:4]),
+    .opcode(io_in[7:6]),
+    .z(io_out[3:0])
+);
+
+endmodule
+
+module alu(
         input [2:0] a, 
         input [2:0] b, 
         input [1:0] opcode, 
