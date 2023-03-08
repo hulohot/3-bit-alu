@@ -24,7 +24,7 @@ module hulohot_alu_wrapper(
     output [7:0] io_out
 );
 
-alu_inst alu_inst(
+alu_inst alu(
     .a(io_in[2:0]),
     .b(io_in[6:4]),
     .opcode(io_in[7:6]),
