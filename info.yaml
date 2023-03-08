@@ -17,7 +17,7 @@ yaml_version: 2.1
 # This info will be automatically collected and used to make a datasheet for the chip.
 documentation:
   author: "Ethan Brugger" # Your name
-  discord: "hulohot" # Your discord handle - make sure to include the # part as well
+  discord: "hulohot#8346" # Your discord handle - make sure to include the # part as well
   title: "3-Bit ALU" # Project title
   description: "An arithmetic unit that has 4 operations, add, sub, bitwise and, and bitwise or." # Short description of what your project does
   how_it_works: "All computation paths are calcualted, and a 4-1 MUX selects the correct output \n
