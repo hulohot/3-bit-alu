@@ -26,19 +26,21 @@ module hulohot_alu(
         output [3:0] z
     );
     
+    wire [3:0] add_op;
+    wire [3:0] sub_op;
+    wire [3:0] and_op;
+    wire [3:0] or_op;
 
-    wire [3:0] add, sub, and, or;
-
-    assign add = a + b;
-    assign sub = a - b;
-    assign and = a & b;
-    assign or = a | b;
+    assign add_op = a + b;
+    assign sub_op = a - b;
+    assign and_op = a & b;
+    assign or_op = a | b;
 
     always @ (opcode)
         case (opcode)
-            2'b00: z = add;
-            2'b01: z = sub;
-            2'b10: z = and;
-            2'b11: z = or;
+            2'b00: z = add_op;
+            2'b01: z = sub_op;
+            2'b10: z = and_op;
+            2'b11: z = or_op;
         endcase
 endmodule
