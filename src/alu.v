@@ -17,10 +17,15 @@
 // 10 - AND
 // 11 - OR
 
-module hulohot_alu(a, b, opcode, z);
-    input [2:0] a, b;
-    input [1:0] opcode;
-    output [3:0] z;
+`default_nettype none
+
+module hulohot_alu(
+        input [2:0] a, 
+        input [2:0] b, 
+        input [1:0] opcode, 
+        output [3:0] z
+    );
+    
 
     wire [3:0] add, sub, and, or;
 
